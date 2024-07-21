@@ -1,0 +1,3 @@
+./model/*.pth
+./data/*.csv
+./myenv

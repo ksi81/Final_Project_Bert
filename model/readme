@@ -1,0 +1,1 @@
+here is a model called ‘bert_toxic_model.pth’, it is created when running train.ipynb, or you can upload your own model created on the basis of BERT, for further use of this model by the app/app.py application

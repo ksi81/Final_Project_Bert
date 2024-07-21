@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: fp_web
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./model:/app/model
+    environment:
+      - MODEL_PATH=/app/model/bert_toxic_model.pth
+

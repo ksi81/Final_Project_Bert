@@ -7,7 +7,8 @@ COPY app/requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY app/app.py .
+COPY app/baner.png .
 
-EXPOSE 8501
+EXPOSE 8503
 
 CMD ["streamlit", "run", "app.py"]

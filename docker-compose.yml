@@ -2,10 +2,21 @@ version: '3'
 services:
   web:
     image: fp_web
+    restart: always
     ports:
       - "8501:8501"
     volumes:
       - ./model:/app/model
     environment:
       - MODEL_PATH=/app/model/bert_toxic_model.pth
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`group7fp.sytes.net`)"
+      - "traefik.http.services.web.loadbalancer.server.port=8501"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
 

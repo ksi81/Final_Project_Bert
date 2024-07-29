@@ -1,19 +1,19 @@
-# Toxic Comment Classification with BERT
+# Toxic comment classification with BERT
 
-## Project Description
+## Project description
 
 This project aims to develop a model capable of identifying and classifying various levels of toxicity in comments. Utilizing the capabilities of BERT (Bidirectional Encoder Representations from Transformers) for text analysis, we create a classifier that helps moderators effectively detect and handle toxic comments, improving the quality of online communities.
 
-## Technical Requirements
+## Technical requirements
 
-- **Programming Language:** Python
+- **Programming language:** Python
 - **Libraries:**
   - PyTorch for deep learning
   - Transformers for using the BERT model
 
 ## Methodology
 
-### Data Preprocessing:
+### Data preprocessing:
 
 - Clean text from unnecessary symbols.
 - Convert text into a format suitable for BERT processing.
@@ -28,15 +28,16 @@ This project aims to develop a model capable of identifying and classifying vari
 
 ## Goals
 
-- **Primary Goal:** Develop a model for effective classification of toxic comments, capable of determining the degree and type of toxicity.
-- **Moderation Improvement:** Provide a tool to simplify moderation and create a healthier environment for online dialogues.
+- **Primary goal:** Develop a model for effective classification of toxic comments, capable of determining the degree and type of toxicity.
+- **Moderation improvement:** Provide a tool to simplify moderation and create a healthier environment for online dialogues.
 
-## Expected Outcomes
+## Expected outcomes
 
 - **Classifier:** A model that can accurately distinguish between toxic and non-toxic comments, as well as identify different levels and types of toxicity.
 - **Interface:** Develop a user-friendly interface for easy access to the model's functionality.
 
-## Project Structure
+## Project structure
+```bash
 .
 ├── app
 │ ├── app.py
@@ -50,37 +51,37 @@ This project aims to develop a model capable of identifying and classifying vari
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
+```
 
 
+## Installation and running
 
-## Installation and Running
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/toxic-comment-classification.git
 cd toxic-comment-classification
 ```
-### 2. Prepare the Dataset
+### 2. Prepare the dataset
 Download the dataset from the [Jigsaw Toxic Comment Classification Challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) and place it in the data directory:
 
 data/train.csv
 
-### 3. Train the Model
+### 3. Train the model
 Before running the web application, you need to train the model. Use train.ipynb to create and save the model in the model folder.
 
-### 4. Build the Docker Container
+### 4. Build the docker container
 ```bash
 docker build --no-cache -t fp_web .
 ```
-### 5. Run the Docker Container
+### 5. Run the docker container
 ```bash
 docker-compose up
 ```
-### 6. Access the Web Application
+### 6. Access the web application
 After starting the container, the web application will be available at: http://localhost:8501
 
-## Configuring Traefik for Production Environment
+## Configuring traefik for production environment
 To use with your own domain, edit docker-compose.yml by adding the appropriate settings for Traefik:
 ```bash
 services:
